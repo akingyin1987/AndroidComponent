@@ -36,6 +36,13 @@ android {
 jacoco {
     toolVersion = "0.7.4+"
 }
+
+greendao {
+  schemaVersion 1
+  daoPackage 'com.akingyin.sample.db.dao'
+  targetGenDir 'src/main/java'
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation deps.support.app_compat
@@ -57,7 +64,7 @@ dependencies {
     implementation deps.constraint_layout
 
     implementation deps.timber
-
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     annotationProcessor deps.dagger.android_support_compiler
     annotationProcessor deps.dagger.compiler
     annotationProcessor deps.room.compiler

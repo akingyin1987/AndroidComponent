@@ -1,6 +1,9 @@
 package com.akingyin.sample.db;
 
 import java.io.Serializable;
+import org.greenrobot.greendao.annotation.Entity;
+import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.Property;
 
 /**
  * @author king
@@ -10,5 +13,23 @@ import java.io.Serializable;
  */
 
 
+@Entity(nameInDb = "tb_user")
 public class UserEntity  implements Serializable {
+
+  @Id(autoincrement = true)
+  public     Long    id;
+
+  @Property
+  public     String     name;
+
+  @Property
+  public     String     account;
+
+  @Property
+  public    Integer    age;
+
+  @Property
+  public     Long      date;
+
+ 
 }
